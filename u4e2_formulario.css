@@ -1,0 +1,27 @@
+body{
+    text-align: center;
+    background-color: rgb(255, 192, 245);
+}
+
+/*Estilo para los campos con error*/
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+input:valid {
+    border: 2px solid green;
+}
+
+input:focus {
+    border: 2px solid blue;
+}
+
+/*Estilo para ocultar el campo adicional hasta que se active el checkbox*/
+#camposAdicionales {
+    margin-top: 10px;
+}

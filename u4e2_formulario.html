@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 2 del tema 4</title>
+    <link rel="stylesheet" href="u4e2_formulario.css">
+</head>
+<body>
+    <h1>Formulario del reto 2 (tema 4)</h1>
+    <form action="" method="post" id="formulario">
+        <!--El identificador debe tener 1 letra, 8 cifras y 1 letra y ser obligatorio-->
+        <label for="identificador">Identificador:</label>
+        <input type="text" id="identificador" name="identificador" pattern="[a-zA-Z]\d{8}[a-zA-Z]" required>
+        <span id="errorIdentificador" class="error"></span>
+        <br>
+
+        <!--Nombre y apellidos, obligatorio y 50 caracteres como máximo-->
+        <label for="nombreApellidos">Nombre y Apellidos:</label>
+        <input type="text" id="nombreApellidos" name="nombreApellidos" maxlength="50" required>
+        <span id="errorNombreApellidos" class="error"></span>
+        <br>
+
+        <!--Fecha de nacimiento, formato dd/mm/yyyy-->
+        <label for="fechaNacimiento">Fecha de nacimiento:</label>
+        <input type="text" id="fechaNacimiento" name="fechaNacimiento" pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\d{4}$" required>
+        <span id="errorFechaNacimiento" class="error"></span>
+        <br>
+
+        <!--Correo electrónico con formato válido-->
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+        <span id="errorCorreo" class="error"></span>
+        <br>
+
+        <!--Teléfono con formato específico-->
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" pattern="^\+([67]{1}[0-9]{1,2})[-\s]?[0-9]{9}$" required>
+        <span id="errorTelefono" class="error"></span>
+        <br>
+
+        <!--Edad, desplegable con opciones-->
+        <label for="edad">Edad:</label>
+        <select id="edad" name="edad">
+            <option value="niño">Niño</option>
+            <option value="adulto">Adulto</option>
+            <option value="jubilado">Jubilado</option>
+        </select>
+        <span id="errorEdad" class="error"></span>
+        <br>
+
+        <!--Club de ski: checkbox-->
+        <label for="clubSki">¿Eres miembro del club de ski?</label>
+        <input type="checkbox" id="clubSki" name="clubSki">
+        <br>
+
+        <!--Campo adicional activado por checkbox-->
+        <div id="camposAdicionales" style="display: none;">
+            <label for="skiNivel">Nivel en el club de ski:</label>
+            <input type="text" id="skiNivel" name="skiNivel">
+            <span id="errorSkiNivel" class="error"></span>
+            <br>
+        </div>
+
+        <button type="submit" id="enviar">Enviar</button>
+    </form>
+
+    <script src="u4e2_formulario.js" defer></script>
+</body>
+</html>
