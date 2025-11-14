@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 1</title>
+    <link rel="stylesheet" href="Reto1.css">
+</head>
+<body>
+
+    <h1>Juego de memoria</h1>
+    <p>En este juego debes clickar en una carta y luego en otra para ver si se forma una pareja.</p>
+    <p>Si no se forma la pareja, se volverán a dar la vuelta en 2 segundos.</p>
+    <p>Si se forma la pareja, se mantendrán giradas con un borde de color rojo y se sumará un punto.</p>
+    <p>Los movimientos se contarán, es decir, cada click que se haga en las cartas se sumará.</p>
+
+    <!--Meto el reverso de la carta 8 veces asignando un id que podría ser la posición del array-->
+    <img src="Reverso_Sakura.webp" id="0">
+    <img src="Reverso_Sakura.webp" id="1">
+    <img src="Reverso_Sakura.webp" id="2">
+    <img src="Reverso_Sakura.webp" id="3">
+    <img src="Reverso_Sakura.webp" id="4">
+    <img src="Reverso_Sakura.webp" id="5">
+    <img src="Reverso_Sakura.webp" id="6">
+    <img src="Reverso_Sakura.webp" id="7">
+
+    <p>Parejas conseguidas:<span id="parejas">0</span></p>
+    <p>Movimientos:<span id="movimientos">0</span></p>
+
+    <script src="Reto1.js" defer></script>
+</body>
+</html>
