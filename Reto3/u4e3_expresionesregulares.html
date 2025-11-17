@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 3</title>
+</head>
+<body>
+    <h1>Control de producto</h1>
+    <form action="" method="post" id="formulario" novalidate>
+        <!--El formato de la fecha y hora de creación debe ser dd/mm/aaaa hh:mm-->
+        <label for="fechaHoraCreacion">Fecha y hora de creación:</label>
+        <!--^indica el inicio de la cadena, luego el día se valida hasta la barra del 1 al 31. El mes se pone de la misma forma pero del 1 al 12 y por último año que empiece
+        por 19 o 20 y después \d{2} que es para que tenga dos dígitos adicionales. \s es un espacio para poner ahora la hora. También se pone con rangos hasta finalizar con $-->
+        <input type="text" id="fechaHoraCreacion" name="fechaHoraCreacion" placeholder="dd/mm/aaaa hh:mm"
+        pattern="^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(19|20)\d{2}\s(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9])$" required>
+        <span id="errorFechaHoraCreacion" class="error"></span>
+        <br>
+
+        <!--El cocinero debe tener dos letras mayúsculas, símbolo y cuatro dígitos-->
+        <label for="cocinero">Cocinero:</label>
+        <!--[A-Z]{2} son dos letras mayúsculas. Luego un símbolo usando [^A-Za-z0-9] o \W. Después \d{4} para cuatro dígitos-->
+        <input type="text" id="cocinero" name="cocinero" placeholder="ej: WW$1234" pattern="^[A-Z]{2}[^A-Za-z0-9]\d{4}$" required>
+        <span id="errorCocinero" class="error"></span>
+        <br>
+
+        <!--Destinatario: dos o tres mayúsculas, guión bajo, ciudad en minúsculas, dos puntos y 4 dígitos-->
+        <label for="destinatario">Destinatario:</label>
+        <!--^[A-Z]{2,3} para dos o tres letras mayúsculas. Luego _, luego ciudad en minúsculas con [a-z]+, luego :, y finalmente \d{4}-->
+        <input type="text" id="destinatario" name="destinatario" placeholder="ej: NM_alburquerque:1234" pattern="^[A-Z]{2,3}_[a-z]+:\d{4}$" required>
+        <span id="errorDestinatario" class="error"></span>
+        <br>
+
+        <!--Gramos del 1000 al 5000-->
+        <label for="gramos">Gramos:</label>
+        <!--Aquí simplemente se pone un mínimo y un máximo ya que lo que pide es un rango-->
+        <input type="number" id="gramos" name="gramos" min="1000" max="5000" required>
+        <span id="errorGramos" class="error"></span>
+        <br>
+
+        <!--Composición: Cantidad en gramos + dos conjuntos de 1 o 2 letras + un número opcional-->
+        <label for="composicion">Composición:</label>
+        <!--^\d+g palabra con 1-2 letras, opcional número, y otra palabra igual-->
+        <input type="text" id="composicion" name="composicion" placeholder="ej: 200gC3OH7" pattern="^\d+g([A-Za-z]{1,2}\d?){2}$" required>
+        <span id="errorComposicion" class="error"></span>
+        <br>
+
+        <!--Número de cuenta EEUU-->
+        <label for="cuenta">Número de cuenta EEUU:</label>
+        <!--Este patrón valida el formato, pero el control final se hará en JS-->
+        <input type="text" id="cuenta" name="cuenta" placeholder="ej: AA02-123400001200-10" pattern="^[A-Z]{2}\d{2}-\d{12}-\d{2}$" required>
+        <span id="errorCuenta" class="error"></span>
+        <br>
+
+        <!--Campo donde irá sin guiones (JS lo rellenará)-->
+        <label for="cuentaUSAfinal">Cuenta sin guiones:</label>
+        <input type="text" id="cuentaUSAfinal" name="cuentaUSAfinal">
+        <span id="errorCuentaUSAfinal" class="error"></span>
+        <br>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+    <script src="u4e3_expresionesregulares.js" defer></script>
+</body>
+</html>
