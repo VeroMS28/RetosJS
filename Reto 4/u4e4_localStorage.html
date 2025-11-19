@@ -1,14 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reto 4 sobre localStorage</title>
+  <meta charset="UTF-8">
+  <title>Reto 4</title>
+  <script src="u4e4_localStorage.js" defer></script>
+
+  <style>
+    /* Zona superior derecha */
+    #contadores {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #f0f0f0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    #contadores div { margin-bottom: 5px; }
+  </style>
 </head>
 <body>
 
-    <buttom type="submit" value="contador" id="boton1"></buttom>
+    <!--Caja de contadores-->
+    <div id="contadores">
+        <div>
+        Forfaits hoy: <span id="cForfaits">0</span>
+        <button onclick="resetForfaits()">Resetear</button>
+        </div>
+        <div>
+        Socios hoy: <span id="cSocios">0</span>
+        <button onclick="resetSocios()">Resetear</button>
+        </div>
+    </div>
 
-    <script src="u4e4_localStorage.js" defer></script>
+    <h2>Registro Forfait (Reto 4)</h2>
+
+    <!-- FORMULARIO-->
+    <form id="formReto4">
+        <label>Nombre:</label>
+        <input type="text" id="nombre"><br><br>
+
+        <label>Email:</label>
+        <input type="text" id="email"><br><br>
+
+        <label>Teléfono:</label>
+        <input type="text" id="telefono"><br><br>
+
+        <label>Modalidad:</label>
+        <select id="modalidad">
+        <option value="">-- Escoge --</option>
+        <option value="dia">Día</option>
+        <option value="tarde">Tarde</option>
+        <option value="semana">Semana</option>
+        </select><br><br>
+
+        <label>¿Eres socio?</label>
+        <input type="checkbox" id="clubSki"><br><br>
+
+        <button type="button" id="btnEnviarR4">Enviar</button>
+    </form>
+
+    <span id="mensaje"></span>
+
 </body>
 </html>
