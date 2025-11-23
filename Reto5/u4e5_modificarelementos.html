@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Personajes de Nana</title>
+  <style>
+        body {
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        table {
+            margin: 0 auto;
+            border-spacing: 15px;
+        }
+
+        img {
+            width: 130px;
+            height: 130px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        img:hover {
+            transform: scale(1.08);
+        }
+
+        #info-panel {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #aaa;
+            border-radius: 8px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: lightpink;
+        }
+
+        #buttons-panel {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #buttons-panel button {
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 6px;
+            border: 1px solid #666;
+            cursor: pointer;
+            background-color: lightpink;
+            transition: background-color 0.2s;
+        }
+
+        #buttons-panel button:hover {
+            background-color: #ddd;
+        }
+
+  </style>
+</head>
+<body>
+
+    <h1>Personajes de Nana</h1>
+
+    <!--Tabla con las imágenes-->
+    <table>
+        <tr>
+        <td><img src="Hachiko.jpg" id="hachiko" class="personaje" alt="Hachiko"></td>
+        <td><img src="Nana.jpg" id="nana" class="personaje blast" alt="Nana"></td>
+        </tr>
+        <tr>
+        <td><img src="Nobu.jpg" id="nobu" class="personaje blast" alt="Nobu"></td>
+        <td><img src="Shin.jpg" id="shin" class="personaje blast" alt="Shin"></td>
+        </tr>
+        <tr>
+        <td><img src="Yasu.jpg" id="yasu" class="personaje blast" alt="Yasu"></td>
+        <td><img src="Ren.jpg" id="ren" class="personaje trapnest" alt="Ren"></td>
+        </tr>
+        <tr>
+        <td><img src="Reira.jpg" id="reira" class="personaje trapnest" alt="Reira"></td>
+        <td><img src="Takumi.jpg" id="takumi" class="personaje trapnest" alt="Takumi"></td>
+        </tr>
+    </table>
+
+    <!--Panel informativo-->
+    <div id="info-panel">
+        <h2>Información</h2>
+        <p id="info-text">Pasa el ratón por una imagen para ver información del personaje.</p>
+    </div>
+
+    <!--Botones-->
+    <div id="buttons-panel">
+        <button data-group="blast">Miembros de BLAST</button>
+        <button data-group="trapnest">Miembros de TRAPNEST</button>
+        <button id="btn-reset">Quitar selección</button>
+    </div>
+
+    <script src="u4e5_modificarelementos.js" defer></script>
+</body>
+</html>

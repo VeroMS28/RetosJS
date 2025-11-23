@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo de personajes</title>
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input, textarea {
+            display: block;
+            margin-bottom: 10px;
+            width: 250px;
+            padding: 5px;
+        }
+
+        .ficha {
+            border: 1px solid #000;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 260px;
+        }
+
+        .ficha img {
+            width: 100%;
+            height: 150px;
+        }
+
+        .ficha a {
+            display: inline-block;
+            margin-top: 5px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Crear ficha de personaje</h1>
+
+    <form id="form-ficha">
+        <label>Título:</label>
+        <input type="text" id="titulo" required>
+
+        <label>URL de imagen:</label>
+        <input type="text" id="imagen" required>
+
+        <label>Enlace externo:</label>
+        <input type="text" id="url" required>
+
+        <label>Descripción:</label>
+        <textarea id="descripcion" required></textarea>
+
+        <button type="button" id="btn-crear">Crear ficha</button>
+    </form>
+
+    <hr>
+
+    <!--Aquí se añadirán las fichas creadas-->
+    <div id="contenedor-fichas"></div>
+
+    <script src="u4e6_crearborrarelementos.js" defer></script>
+</body>
+</html>

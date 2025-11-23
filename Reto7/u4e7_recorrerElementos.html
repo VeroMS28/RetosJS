@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Analizador de formularios</title>
+
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        #resultado {
+            border: 1px solid #999;
+            padding: 10px;
+            min-height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Analizador de formularios</h1>
+
+    <form id="mi-formulario">
+        <!--Comentario de prueba en el formulario-->
+
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" value="sandiego">
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password">
+
+        <label for="bio">Biografía:</label>
+        <textarea id="bio" name="bio" class="texto-largo">Me gusta el anime, la lectura y bailar.</textarea>
+
+        <label for="pais">País:</label>
+        <select id="pais" name="pais" class="lista-paises">
+            <option value="es">España</option>
+            <option value="fr">Francia</option>
+            <option value="jp">Japón</option>
+        </select>
+
+        <button type="submit" id="btn-enviar" name="enviar">Enviar formulario</button>
+    </form>
+
+    <button id="btn-analizar" type="button">Analizar formulario</button>
+
+    <h2>Resultado del análisis</h2>
+    <div id="resultado"></div>
+
+    <script src="u4e7_recorrerElementos.js" defer></script>
+</body>
+</html>
