@@ -2,6 +2,7 @@
 //Siempre primero lo de window
 window.addEventListener('load', function(){
     document.querySelector('form').addEventListener('submit', function(event){
+        //preventDefault solo cuando son formularios
         event.preventDefault();
         fetchData();
     });

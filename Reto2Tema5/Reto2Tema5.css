@@ -1,0 +1,85 @@
+/*Estilo general*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #2b001c;
+    color: #e5e7eb;
+    padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/*Input de búsqueda*/
+label {
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.5rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid #4b5563;
+    background: #3a2600;
+    color: #e5e7eb;
+    outline: none;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    margin-bottom: 1.5rem;
+}
+
+input[type="text"]:focus {
+    border-color: #f5f838;
+    box-shadow: 0 0 0 3px rgba(223, 248, 0, 0.4);
+}
+
+/*Contenedor de películas*/
+#peliculas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+/*Tarjeta de película*/
+.poster {
+    background: #230033;
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, translate 0.2s ease;
+    cursor: pointer;
+}
+
+.poster img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+/*Título y año*/
+.poster h2 {
+    font-size: 1rem;
+    margin-top: 0.25rem;
+}
+
+.poster p {
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+
+.poster:hover {
+    transform: scale(1.03);
+    translate: 0 -4px;
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.6);
+}
