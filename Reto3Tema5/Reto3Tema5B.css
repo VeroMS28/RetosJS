@@ -1,0 +1,61 @@
+body {
+    background: #fffaae;
+    padding: 2rem;
+    color: #333;
+}
+
+/*Formulario*/
+form {
+    max-width: 400px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+select,
+input {
+    flex: 1;
+    padding: 0.3rem 0.4rem;
+}
+
+button {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    background: #021849;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #102c7a;
+}
+
+/*Contenedor tarjetas*/
+div {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    gap: 0.75rem;
+}
+
+/*Tarjetas (cada <ul>)*/
+div ul {
+    list-style: none;
+    background: white;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+div ul:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}

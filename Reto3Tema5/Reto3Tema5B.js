@@ -12,7 +12,7 @@ window.addEventListener('load', function(){
 //En este caso son 10 páginas y se ve en la API en total_pages
 const fetchAllData = async (type) => {
     let allData = [];
-    let url;
+    let url = `https://www.swapi.tech/api/${type}`;
     try{
         const response = await fetch(url);
         if (!response.ok) {
@@ -43,8 +43,8 @@ const fetchAllData = async (type) => {
     console.log(allData);
     const container = document.querySelector('div');
     //Mostrar
-    allData.map ((e=>{
-        containeer.innerHTML *= `
+    allData.forEach((e=>{
+        container.innerHTML += `
         <ul>
             <li>${e.uid}</li>
             <li>${e.name}</li>
@@ -99,7 +99,7 @@ const fetchInData = async (type, id) => {
                 <ul>
                     <li>${data.result.properties.name}</li>
                     <li>${data.result.properties.crew}</li>
-                    <li>${data.result.properties.passenger}</li>
+                    <li>${data.result.properties.passengers}</li>
                     <!--Array de prueba para que muestre la primera película-->
                     <li>${data.result.properties.films[0]}</li>
                 </ul>

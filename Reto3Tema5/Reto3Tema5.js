@@ -49,7 +49,7 @@ function checkID(event){
     if(id.checkValidity()){
         fetchAPI();
     }else{
-        const error = StereoPannerNode.querySelector('span');
+        const error = document.querySelector('span');
         //Apuntes validity para ver el tipo de error
         if (id.validity.valueMissing){
             error.innerHTML = "Este campo es obligatorio";

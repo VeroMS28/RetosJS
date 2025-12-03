@@ -1,0 +1,64 @@
+/*Estilos generales*/
+body {
+    background: #ffccff;
+    padding: 2rem;
+    color: #222222;
+}
+
+/*Título*/
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/*Formulario*/
+form {
+    max-width: 300px;
+    margin: 0 auto;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 0.4rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.4rem;
+}
+
+span {
+    display: block;
+    color: red;
+    font-size: 0.9rem;
+    height: 1rem; /*mantiene hueco aunque no haya error*/
+}
+
+button {
+    width: 100%;
+    padding: 0.5rem;
+    background: #00184d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #002791;
+}
+
+/*Resultados*/
+div {
+    max-width: 300px;
+    margin: 1.5rem auto;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
